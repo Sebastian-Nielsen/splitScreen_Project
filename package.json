@@ -1,0 +1,35 @@
+{
+  "name": "project-reactredux",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cls && mocha tests",
+    "deploy": "cls && webpack && git add --all && git commit -m \".\" && git push heroku master && heroku logs --tail",
+    "build": "webpack --mode=development",
+    "build:dev": "webpack --mode=development && cls && nodemon index.js",
+    "start": "node index.js",
+    "dev": "cls && nodemon index.js",
+    "dev:com": "cls && npm run sass:compile && nodemon index.js --mode=development",
+    "sass:compile": "node-sass --include-path sass public/stylesheets/styles.scss public/stylesheets/styles.css"
+  },
+  "author": "Sebastian Nielsen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "pug": "2.0.0-beta11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}
