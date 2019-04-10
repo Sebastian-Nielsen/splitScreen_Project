@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../public/js/index.js"],"names":["console","log"],"mappings":";;AAAAA,QAAQC,GAAR,CAAY,gBAAZ","file":"index.js","sourcesContent":["console.log('\"index.js\" ran');\r\n\r\n\r\n"]}
