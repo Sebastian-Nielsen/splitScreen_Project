@@ -10,7 +10,7 @@
     "start": "node index.js",
     "dev": "cls && nodemon index.js",
     "dev:com": "cls && npm run sass:compile && nodemon index.js --mode=development",
-    "sass:compile": "node-sass --include-path sass public/stylesheets/styles.scss public/stylesheets/styles.css"
+    "sass:compile": "node-sass --include-path sass public/css/styles.scss public/css/styles.css"
   },
   "author": "Sebastian Nielsen",
   "license": "ISC",
