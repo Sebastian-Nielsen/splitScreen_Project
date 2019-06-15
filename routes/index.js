@@ -20,11 +20,7 @@ module.exports = app;
 
 //The 404 Route (ALWAYS Keep this as the last route)
 app.get('*', (req, res) => {
-	//console.log(req)
-	const path = req._parsedUrl.path;
-	if (path.match(/\//g).length >= 3) {
-		console.log('File "routes.js" line ~51: HANDLE ERROR NOT DISPLAYING CORRECT'); // TODO
-	}
+	console.log('404: PAGE NOT FOUND');
 	res.status(404).render("error.pug");
 });
 
