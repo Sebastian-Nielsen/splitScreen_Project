@@ -9,7 +9,7 @@ const path = require('path');
 const app = require('express').Router();
 
 
-app.get('/', (req, res) => {
+app.get(/\/(homepage(\.pug)?)?$/i, (req, res) => {
 	console.log('[get:] "/"');
 	res.render('homepage.pug')
 });
